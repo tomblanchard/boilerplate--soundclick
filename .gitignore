@@ -1,0 +1,6 @@
+.*
+!.gitignore
+!.emptydir
+node_modules
+/site/*.html
+/site/lib/css/*.css

@@ -1,0 +1,162 @@
+/**********************************************************************************
+ * LAYOUT NAME
+ **********************************************************************************
+ *
+ * Designer:      three29design
+ * Designer URI:  http://three29design.com
+ * Developer:     Tom Blanchard
+ * Developer URI: http://tomblanchard.co.uk
+ *
+ *********************************************************************************/
+
+$theme-height:600px;
+
+$song-box-links:blue;
+
+$song-box-links--hover:green;
+
+$song-box-title:blue;
+
+$song-box-border:blue;
+
+@import "reset";
+
+body {
+  background:#000;
+}
+
+.statsNumbers {
+  position:absolute;
+  top:100px;
+  left:50%;
+  font-size:14px;
+  color:#FFF;
+  margin-left:-400px;
+}
+
+.embeddedPlayer * {
+  position:absolute;
+  top:0;
+  left:50%;
+  margin-left:0;
+  z-index:1;
+}
+
+form .mailingList {
+  position:absolute;
+  top:0;
+  left:50%;
+  margin-left:0;
+
+  .mlheadline {
+    display:none;
+  }
+
+  .mlinputBox_off,
+  .mlinputBox {
+    width:300px;
+  }
+}
+
+.newsBox {
+  width:348px;
+  height:158px;
+  position:absolute;
+  top:0;
+  left:50%;
+  margin-left:0;
+  overflow:auto;
+}
+
+.pageturner {
+  background-color:#000;
+  color:#FFF;
+}
+
+.sprite {
+  position:relative;
+  overflow:hidden;
+  text-indent:-9999px;
+  background-image:url();
+
+  & & {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    transition:.2s;
+
+    &:hover {
+      opacity:0;
+    }
+  }
+}
+
+.theme {
+  position:absolute;
+  top:200px;
+  left:50%;
+  width:900px;
+  height:500px;
+  margin-left:-450px;
+  background:#FFF;
+
+
+  &__banner {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:0;
+    background:url() #000 no-repeat 50% 0;
+  }
+
+
+  &__bio {
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:15px;
+    line-height:1.4;
+    color:#FFF;
+    height:0;
+    overflow:auto;
+  }
+
+
+  &__nav {
+    width:0;
+    height:0;
+
+    &-item {
+      height:0;
+      width:0;
+      float:left;
+
+      &--1 {
+        background-position:0 0;
+
+        .sprite {
+          background-position:0 0;
+        }
+      }
+    }
+  }
+
+
+  &__tag {
+    position:absolute;
+    bottom:0;
+    right:0;
+    background-position:0 0;
+    width:0;
+    height:0;
+
+    .sprite {
+      background-position:0 0;
+    }
+  }
+
+
+}

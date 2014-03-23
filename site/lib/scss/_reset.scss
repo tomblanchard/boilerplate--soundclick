@@ -1,0 +1,112 @@
+body,
+div,
+tr,
+td,
+select,
+textarea,
+input,
+option {
+  font-family:Verdana;
+  font-size:10px;
+}
+
+img {
+  border:none;
+}
+
+.navigation,
+.mainTable,
+.mainContent,
+.newsBox {
+  background:transparent !important;
+}
+
+.completeNavHeader {
+  position:relative;
+  z-index:999999;
+}
+
+.headlineSuppl,
+.headlineBig,
+.headline {
+  display:none;
+}
+
+.statsNumbers {
+  width:auto !important;
+  padding:0 !important;
+  z-index:9;
+}
+
+.contText br {
+  display:none;
+}
+
+.mainTable {
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+  border:none;
+  color:#000;
+}
+
+.mainTable,
+.navbarBottom,
+.navbarTop {
+  width:800px;
+}
+
+.mainContent {
+  margin:0;
+  width:100%;
+}
+
+.newsBox {
+  margin:0;
+  padding:0 !important;
+  border:0;
+  width:auto;
+}
+
+.historyBoxPublic {
+  height:auto !important;
+}
+
+.pageturner {
+  margin-top:20px;
+  opacity:0.8;
+  border:none;
+  border-radius:5px;
+}
+
+.pageturner a {
+  color:#FFF !important;
+}
+
+.pageFooter,
+.pageturner {
+  text-align:center;
+}
+
+.theme-height {
+  margin-bottom:$theme-height;
+}
+
+.songsBox,
+.actionlinks a:link,
+.actionlinks a:visited {
+  color:$song-box-links;
+}
+
+.actionlinks a:hover {
+  color:$song-box-links--hover;
+}
+
+a.songtitle:link,
+a.songtitle:visited {
+  color:$song-box-title;
+}
+
+.songsBox {
+  border-color:$song-box-border;
+}

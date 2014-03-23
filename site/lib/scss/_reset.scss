@@ -110,3 +110,14 @@ a.songtitle:visited {
 .songsBox {
   border-color:$song-box-border;
 }
+
+@if $minimal-header == true {
+  .completeNavHeader {
+    top:-51px;
+    transition:.4s;
+
+    &:hover {
+      top:0;
+    }
+  }
+}

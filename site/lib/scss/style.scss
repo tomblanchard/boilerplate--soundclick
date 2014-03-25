@@ -13,6 +13,10 @@ $theme-height:600px;
 
 $minimal-header:false;
 
+$mailing-list:false;
+
+$new-box:false;
+
 $song-box-links:blue;
 
 $song-box-links--hover:green;
@@ -44,7 +48,7 @@ body {
   z-index:1;
 }
 
-form .mailingList {
+.mailingList {
   position:absolute;
   top:0;
   left:50%;
@@ -60,7 +64,7 @@ form .mailingList {
   }
 }
 
-.newsBox {
+.mainContent .newsBox {
   width:348px;
   height:158px;
   position:absolute;

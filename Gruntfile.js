@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'site/lib/scss',
+          cwd: 'src/scss',
           src: ['**/*.scss'],
           dest: 'site/lib/css',
           ext: '.css'
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
      * Delete all `.html` files from `site`.
      */
     clean: {
-      html: { src: ['site/**/*.html', '!site/lib/**/*.html'] }
+      html: { src: ['site/**/*.html'] }
     },
 
 
@@ -84,13 +84,13 @@ module.exports = function(grunt) {
      */
     includes: {
       dist: {
-        cwd: 'site/lib/templates',
+        cwd: 'src/templates',
         src: ['**/*.html', '!includes/**/*'],
         dest: 'site',
         options: {
           flatten: true,
           includeRegexp: /^(\s*){% include\s+"(\S+)" %}\s*$/,
-          includePath: 'site/lib/templates/includes'
+          includePath: 'src/templates/includes'
         }
       }
     },
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
        * Watch `.html` files: delete all `.html` files from `site` then re-compile site .
        */
       html: {
-        files: 'site/lib/templates/**/*.html',
+        files: 'src/templates/**/*.html',
         tasks: ['clean:html', 'includes:dist'],
         options: {
           spawn: false,
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
        * Watch Sass files: re-compile them to CSS then re-autoprefix the CSS.
        */
       sass: {
-        files: 'site/lib/scss/**/*.scss',
+        files: 'src/scss/**/*.scss',
         tasks: ['sass:dist', 'autoprefixer:dist'],
         options: {
           spawn: false,

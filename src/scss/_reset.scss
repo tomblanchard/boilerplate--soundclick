@@ -122,13 +122,13 @@ a.songtitle:visited {
   }
 }
 
-@if $mailing-list != true {
+@if $mailing-list == false {
   .mailingList {
     display:none;
   }
 }
 
-@if $new-box != true {
+@if $news-box == false {
   .mainContent .newsBox {
     display:none;
   }

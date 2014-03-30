@@ -7,9 +7,6 @@ module.exports = function(grunt) {
 
 
 
-    /**
-     * Start server.
-     */
     connect: {
       server: {
         options: {
@@ -27,9 +24,6 @@ module.exports = function(grunt) {
     },
 
 
-    /**
-     * Compile Sass from `src/scss` to `src/css`.
-     */
     sass: {
       dist: {
         options: {
@@ -46,9 +40,6 @@ module.exports = function(grunt) {
     },
 
 
-    /**
-     * Autoprefix compiled CSS.
-     */
     autoprefixer: {
       options: {
         browsers: [
@@ -71,17 +62,11 @@ module.exports = function(grunt) {
     },
 
 
-    /**
-     * Delete all `.html` files from `site`.
-     */
     clean: {
       html: { src: ['site/**/*.html'] }
     },
 
 
-    /**
-     * Compile site `.html` files (excluding includes) from `templates` to `site`.
-     */
     includes: {
       dist: {
         cwd: 'src/templates',
@@ -96,13 +81,7 @@ module.exports = function(grunt) {
     },
 
 
-    /**
-     * Runs tasks against changed watched files.
-     */
     watch: {
-      /**
-       * Watch `.html` files: delete all `.html` files from `site` then re-compile site .
-       */
       html: {
         files: 'src/templates/**/*.html',
         tasks: ['clean:html', 'includes:dist'],
@@ -112,9 +91,6 @@ module.exports = function(grunt) {
         }
       },
 
-      /**
-       * Watch Sass files: re-compile them to CSS then re-autoprefix the CSS.
-       */
       sass: {
         files: 'src/scss/**/*.scss',
         tasks: ['sass:dist', 'autoprefixer:dist'],
